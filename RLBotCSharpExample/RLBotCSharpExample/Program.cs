@@ -1,4 +1,5 @@
 ﻿using RLBotDotNet;
+using System.IO;
 
 namespace RLBotCSharpExample
 {
@@ -6,10 +7,15 @@ namespace RLBotCSharpExample
     {
         static void Main()
         {
+            // Read the port from port.cfg.
+            const string file = "port.cfg";
+            string text = File.ReadAllLines(file)[0];
+            int port = int.Parse(text);
+
             // BotManager is a generic which takes in your bot as its T type.
             BotManager<ExampleBot> botManager = new BotManager<ExampleBot>();
-            // Start the server on port 45031.
-            botManager.Start(45031);
+            // Start the server on the port given in the port.cfg file.
+            botManager.Start(port);
         }
     }
 }
