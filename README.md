@@ -7,53 +7,41 @@ Example of a Rocket League bot implemented in C#
 1. Make sure you've installed [Python 3.6 64 bit](https://www.python.org/ftp/python/3.6.5/python-3.6.5-amd64.exe). During installation:
    - Select "Add Python to PATH"
    - Make sure pip is included in the installation
-2. Make sure you've installed the [.NET Framework 4.6.1](https://www.microsoft.com/en-us/download/details.aspx?id=49981) (or newer)
-3. Open Rocket League
-4. Double click on the bot executable (`RLBotCSharpExample/RLBotCSharpExample/bin/x64/Release/RLBotCSharpExample.exe`) and leave it running.
-5. Double click on run-gui.bat
-6. Click the 'Run' button
+2. Install Visual Studio 2015 or newer. It should come with .NET Framework 4.6.1 or newer.
+3. Open RLBotCSharpExample\RLBotCSharpExample.sln in Visual Studio.
+4. In Visual Studio, click the "Start" button, which should compile and run the bot. Leave it running.
+5. Open Rocket League
+6. Double click on run-gui.bat
+7. Click the 'Run' button
 
 ### Notes
 
 - Bot behavior is controlled by `RLBotCSharpExample/RLBotCSharpExample/ExampleBot.cs`
 - Bot appearance is controlled by `CSharpPythonAgent/appearance.cfg`
-- The bot executable's folder MUST contain `FlatBuffers.dll` and `RLBotDotNet.dll`.
-- The bot executable's folder MUST contain a folder called `dll` containing `RLBot_Core_Interface.dll`.
-- The port given in `port.cfg` MUST match the port given to BotManager in the C# project.
 
-## Compilation instructions
+### Tournament submissions
 
-The bot executable should work out of the box, however you'll want to recompile after making your own changes.
+When submitting to a tournament, you will need to include several files. 
 
-You won't need to recompile anything other than the bot but if you want the latest and greatest, you can also recompile `FlatBuffers.dll`, `RLBotDotNet.dll`, and `RLBot_Core_Interface.dll`. If you choose to recompile the DLLs, make sure that the bot project references the new DLLs you recompiled.
+Some can be found under RLBotCSharpExample/RLBotCSharpExample/bin after you compile in Visual Studio:
+- RLBotCSharpExample.exe
+- FlatBuffers.dll
+- RLBotDotNet.dll
+- port.cfg
 
-### Bot compilation
+You should also include the entire CSharpPythonAgent folder. This folder also contains a port.cfg file. *Make sure their contents are identical!*
 
-1. Open `RLBotCSharpExample/RLBotCSharpExample.sln` in Visual Studio 2015 or newer.
-2. Click Build in the menu, then click Build Solution (or press Ctrl+Shift+B).
-3. The compiled executable should appear in a folder in `RLBotCSharpExample/RLBotCSharpExample/bin`.
+### Upgrades
 
-The example bot references both RLBotDotNet.dll and FlatBuffers.dll.
+This project uses a package manager called NuGet to keep track of the RLBot framework.
+The framework will get updates periodically, and you'll probably want them, especially if you want to make sure
+your bot will work right in the next tournament! To upgrade:
 
-### FlatBuffers DLL compilation
+1. Open the project in Visual Studio.
+2. Right click on the RLBotCSharpExample C# project, and choose "Manage NuGet Packages..."
+3. Click on the "Installed" tab. You should see a package called "RLBot.Framework".
+4. If an update is available, it should say so and give you the option to upgrade.
 
-1. Download/clone the [FlatBuffers repository](https://github.com/google/flatbuffers).
-2. Open `FlatBuffers.csproj` (located in `net/FlatBuffers`).
-3. Choose your configurations and build the project.
-
-### RLBotDotNet DLL compilation
-
-1. Download/clone TheBlocks' fork's [csharp-port branch](https://github.com/TheBlocks/RLBot/tree/csharp-port/src/main/cs/RLBotDotNet).
-2. Open `RLBotDotNet.sln` (located in `src/main/cs/RLBotDotNet`).
-3. Choose your configurations and build the solution.
-
-### RLBot Core Interface DLL compilation
-
-1. Download/clone the [RLBot repository](https://github.com/RLBot/RLBot/tree/master/src/main/cpp/RLBotInterface).
-2. Open `RLBotInterface.sln` (located in `src/main/cpp/RLBotInterface`).
-3. Choose your configurations and build the solution.
-
-The instructions for building the interface should be in the README in the above repository's interface solution folder.
 
 ## Overview of how the C# bot interacts with Python
 
