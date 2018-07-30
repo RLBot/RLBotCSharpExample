@@ -53,11 +53,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="FlatBuffers, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\RLBot.Framework.0.0.2\lib\net461\FlatBuffers.dll</HintPath>
+      <HintPath>..\packages\RLBot.Framework.0.0.3\lib\net461\FlatBuffers.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="RLBotDotNet, Version=0.0.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\RLBot.Framework.0.0.2\lib\net461\RLBotDotNet.dll</HintPath>
+    <Reference Include="RLBotDotNet, Version=0.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RLBot.Framework.0.0.3\lib\net461\RLBotDotNet.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
