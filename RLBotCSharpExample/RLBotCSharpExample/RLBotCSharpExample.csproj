@@ -8,9 +8,10 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>RLBotCSharpExample</RootNamespace>
     <AssemblyName>RLBotCSharpExample</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -62,6 +63,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -72,11 +74,11 @@
   <ItemGroup>
     <Compile Include="ExampleBot.cs" />
     <Compile Include="Program.cs" />
-    <Compile Include="RLMath.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <Compile Include="DataConversion.cs" />
     <None Include="packages.config" />
     <None Include="port.cfg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
