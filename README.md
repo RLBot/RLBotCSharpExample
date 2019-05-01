@@ -7,7 +7,7 @@ Example of a Rocket League bot implemented in C#
 1. Make sure you've installed [Python 3.6 64 bit](https://www.python.org/ftp/python/3.6.5/python-3.6.5-amd64.exe). During installation:
    - Select "Add Python to PATH"
    - Make sure pip is included in the installation
-2. Install Visual Studio 2017 or newer. It should come with .NET Framework 4.6.1 or newer.
+2. Install Visual Studio 2015 or newer. It should come with .NET Framework 4.6.1 or newer.
 3. Open RLBotCSharpExample\RLBotCSharpExample.sln in Visual Studio.
 4. In Visual Studio, click the "Start" button, which should compile and run the bot. Leave it running.
 5. Double click on run-gui.bat
