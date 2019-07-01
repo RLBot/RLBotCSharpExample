@@ -4,7 +4,7 @@ Example of a Rocket League bot implemented in C#
 
 ## Usage Instructions
 
-1. Make sure you've installed [Python 3.6 64 bit](https://www.python.org/ftp/python/3.6.5/python-3.6.5-amd64.exe). During installation:
+1. Make sure you've installed [Python 3.7 64 bit](https://www.python.org/ftp/python/3.7.3/python-3.7.3-amd64.exe). During installation:
    - Select "Add Python to PATH"
    - Make sure pip is included in the installation
 2. Install Visual Studio 2015 or newer. It should come with .NET Framework 4.6.1 or newer.
