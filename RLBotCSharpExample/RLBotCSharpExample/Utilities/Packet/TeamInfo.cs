@@ -1,6 +1,6 @@
 namespace RLBotCSharpExample.Utilities.Packet
 {
-    public struct TeamInfo
+    public class TeamInfo
     {
         public int TeamIndex;
         public int Score;

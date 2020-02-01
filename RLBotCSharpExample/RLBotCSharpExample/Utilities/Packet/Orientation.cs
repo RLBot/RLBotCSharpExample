@@ -3,7 +3,7 @@ using System.Numerics;
 
 namespace RLBotCSharpExample.Utilities.Packet
 {
-    public struct Orientation
+    public class Orientation
     {
         public float Pitch;
         public float Roll;

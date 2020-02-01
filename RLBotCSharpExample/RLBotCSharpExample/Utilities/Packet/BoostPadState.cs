@@ -1,6 +1,6 @@
 namespace RLBotCSharpExample.Utilities.Packet
 {
-    public struct BoostPadState
+    public class BoostPadState
     {
         public float Timer;
         public bool IsActive;

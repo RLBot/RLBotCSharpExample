@@ -1,6 +1,6 @@
 namespace RLBotCSharpExample.Utilities.Packet
 {
-    public struct Ball
+    public class Ball
     {
         public Physics Physics;
 

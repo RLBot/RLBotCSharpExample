@@ -1,6 +1,6 @@
 namespace RLBotCSharpExample.Utilities.Packet
 {
-    public struct GameInfo
+    public class GameInfo
     {
         public float SecondsElapsed;
         public float GameTimeRemaining;

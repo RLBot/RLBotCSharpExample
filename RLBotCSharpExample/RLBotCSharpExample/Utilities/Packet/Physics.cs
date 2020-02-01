@@ -2,7 +2,7 @@ using System.Numerics;
 
 namespace RLBotCSharpExample.Utilities.Packet
 {
-    public struct Physics
+    public class Physics
     {
         public Vector3 Location;
         public Vector3 Velocity;
