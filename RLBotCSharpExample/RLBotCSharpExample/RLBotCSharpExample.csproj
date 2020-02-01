@@ -73,10 +73,18 @@
     <Compile Include="ExampleBot.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\DataConversion.cs" />
+    <Compile Include="Utilities\Packet\Ball.cs" />
+    <Compile Include="Utilities\Packet\BoostPadState.cs" />
+    <Compile Include="Utilities\Packet\GameInfo.cs" />
+    <Compile Include="Utilities\Packet\Orientation.cs" />
+    <Compile Include="Utilities\Packet\Physics.cs" />
+    <Compile Include="Utilities\Packet\Player.cs" />
+    <Compile Include="Utilities\Packet\Packet.cs" />
+    <Compile Include="Utilities\Packet\TeamInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <Compile Include="DataConversion.cs" />
     <None Include="packages.config" />
     <None Include="port.cfg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

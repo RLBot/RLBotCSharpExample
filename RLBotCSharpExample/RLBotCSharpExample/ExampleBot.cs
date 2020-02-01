@@ -1,6 +1,6 @@
-﻿using System;
+﻿using System.Numerics;
 using RLBotDotNet;
-using rlbot.flat;
+using RLBotCSharpExample.Utilities.Packet;
 
 namespace RLBotCSharpExample
 {
@@ -8,40 +8,37 @@ namespace RLBotCSharpExample
     class ExampleBot : Bot
     {
         // We want the constructor for ExampleBot to extend from Bot, but we don't want to add anything to it.
+        // You might want to add logging initialisation or other types of setup up here before the bot starts.
         public ExampleBot(string botName, int botTeam, int botIndex) : base(botName, botTeam, botIndex) { }
 
-        public override Controller GetOutput(GameTickPacket gameTickPacket)
+        public override Controller GetOutput(rlbot.flat.GameTickPacket gameTickPacket)
         {
-            // This controller object will be returned at the end of the method.
-            // This controller will contain all the inputs that we want the bot to perform.
-            Controller controller = new Controller();
+            // We process the gameTickPacket and convert it to our own internal data structure.
+            Packet packet = new Packet(gameTickPacket);
 
-            // Store the required data from the gameTickPacket.
-            // The GameTickPacket's attributes are nullables, so you must use .Value.
-            // It is recommended to create your own internal data structure to avoid the displeasing .Value syntax.
-            Vector3 ballLocation = gameTickPacket.Ball.Value.Physics.Value.Location.Value;
-            Vector3 carLocation = gameTickPacket.Players(this.index).Value.Physics.Value.Location.Value;
-            Rotator carRotation = gameTickPacket.Players(this.index).Value.Physics.Value.Rotation.Value;
+            // Get the data required to drive to the ball.
+            Vector3 ballLocation = packet.Ball.Physics.Location;
+            Vector3 carLocation = packet.Players[index].Physics.Location;
+            Orientation carRotation = packet.Players[index].Physics.Rotation;
 
-            // Calculate to get the angle from the front of the bot's car to the ball.
-            double botToTargetAngle = Math.Atan2(ballLocation.Y - carLocation.Y, ballLocation.X - carLocation.X);
-            double botFrontToTargetAngle = botToTargetAngle - carRotation.Yaw;
-            // Correct the angle
-            if (botFrontToTargetAngle < -Math.PI)
-                botFrontToTargetAngle += 2 * Math.PI;
-            if (botFrontToTargetAngle > Math.PI)
-                botFrontToTargetAngle -= 2 * Math.PI;
+            // Find where the ball is relative to us.
+            Vector3 ballRelativeLocation = Orientation.RelativeLocation(carLocation, ballLocation, carRotation);
 
             // Decide which way to steer in order to get to the ball.
-            if (botFrontToTargetAngle > 0)
-                controller.Steer = 1;
+            // If the ball is to our left, we steer left. Otherwise we steer right.
+            float steer;
+            if (ballRelativeLocation.Y > 0)
+                steer = 1;
             else
-                controller.Steer = -1;
+                steer = -1;
 
-            // Set the throttle to 1 so the bot can move.
-            controller.Throttle = 1;
-
-            return controller;
+            // This controller will contain all the inputs that we want the bot to perform.
+            return new Controller
+            {
+                // Set the throttle to 1 so the bot can move.
+                Throttle = 1,
+                Steer = steer
+            };
         }
     }
 }
