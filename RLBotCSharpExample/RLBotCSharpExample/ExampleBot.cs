@@ -1,4 +1,5 @@
 ﻿using System.Numerics;
+using System.Windows.Media;
 using RLBotDotNet;
 using RLBotCSharpExample.Utilities.Packet;
 
@@ -31,7 +32,12 @@ namespace RLBotCSharpExample
                 steer = 1;
             else
                 steer = -1;
-
+            
+            // Examples of rendering in the game
+            Renderer.DrawString3D("Ball", Colors.Black, ballLocation, 3, 3);
+            Renderer.DrawString3D(steer > 0 ? "Right" : "Left", Colors.Aqua, carLocation, 3, 3);
+            Renderer.DrawLine3D(Colors.Red, carLocation, ballLocation);
+            
             // This controller will contain all the inputs that we want the bot to perform.
             return new Controller
             {
