@@ -1,7 +1,6 @@
-﻿using RLBotDotNet;
-using System.IO;
+﻿using System.IO;
 
-namespace RLBotCSharpExample
+namespace Bot
 {
     class Program
     {
@@ -12,8 +11,7 @@ namespace RLBotCSharpExample
             string text = File.ReadAllLines(file)[0];
             int port = int.Parse(text);
 
-            // BotManager is a generic which takes in your bot as its T type.
-            BotManager<ExampleBot> botManager = new BotManager<ExampleBot>(0);
+            RLBotDotNet.BotManager<Bot> botManager = new RLBotDotNet.BotManager<Bot>(0);
             // Start the server on the port given in the port.cfg file.
             botManager.Start(port);
         }

@@ -1,4 +1,4 @@
-namespace RLBotCSharpExample.Utilities.Packet
+namespace Bot.Utilities.Packet
 {
     /// <summary>
     /// Processed version of the <see cref="rlbot.flat.GameTickPacket"/> that uses sane data structures.

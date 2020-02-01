@@ -1,6 +1,6 @@
 using System.Numerics;
 
-namespace RLBotCSharpExample.Utilities.Packet
+namespace Bot.Utilities.Packet
 {
     public class Physics
     {

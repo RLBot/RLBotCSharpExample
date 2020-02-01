@@ -1,16 +1,16 @@
 ﻿using System.Numerics;
 using System.Windows.Media;
+using Bot.Utilities.Packet;
 using RLBotDotNet;
-using RLBotCSharpExample.Utilities.Packet;
 
-namespace RLBotCSharpExample
+namespace Bot
 {
     // We want to our bot to derive from Bot, and then implement its abstract methods.
-    class ExampleBot : Bot
+    class Bot : RLBotDotNet.Bot
     {
-        // We want the constructor for ExampleBot to extend from Bot, but we don't want to add anything to it.
+        // We want the constructor for our Bot to extend from RLBotDotNet.Bot, but we don't want to add anything to it.
         // You might want to add logging initialisation or other types of setup up here before the bot starts.
-        public ExampleBot(string botName, int botTeam, int botIndex) : base(botName, botTeam, botIndex) { }
+        public Bot(string botName, int botTeam, int botIndex) : base(botName, botTeam, botIndex) { }
 
         public override Controller GetOutput(rlbot.flat.GameTickPacket gameTickPacket)
         {

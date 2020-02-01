@@ -1,4 +1,4 @@
-﻿namespace RLBotCSharpExample.Utilities
+﻿namespace Bot.Utilities
 {
     public static class DataConversion
     {

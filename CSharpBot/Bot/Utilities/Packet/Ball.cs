@@ -1,4 +1,4 @@
-namespace RLBotCSharpExample.Utilities.Packet
+namespace Bot.Utilities.Packet
 {
     public class Ball
     {
