@@ -51,5 +51,5 @@ your bot will work right in the next tournament!
 ## Overview of how the C# bot interacts with Python
 
 The C# bot executable is a server that listens for Python clients.
-When `PythonAgent/CSharpPythonAgent.py` is started by the RLBot framework, it connects to the C# bot server and tells it its info.
+When `PythonAgent/PythonAgent.py` is started by the RLBot framework, it connects to the C# bot server and tells it its info.
 Then, the C# bot server controls the bot through the `RLBot_Core_Interface` DLL.
