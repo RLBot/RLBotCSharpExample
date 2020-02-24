@@ -1,6 +1,8 @@
 ﻿using System.Numerics;
 using System.Windows.Media;
-using Bot.Utilities.Packet;
+using Bot.Utilities.Processed.BallPrediction;
+using Bot.Utilities.Processed.FieldInfo;
+using Bot.Utilities.Processed.Packet;
 using RLBotDotNet;
 
 namespace Bot
@@ -46,5 +48,10 @@ namespace Bot
                 Steer = steer
             };
         }
+        
+        // Hide the old methods that return Flatbuffers objects and use our own methods that
+        // use processed versions of those objects instead.
+        internal new FieldInfo GetFieldInfo() => new FieldInfo(base.GetFieldInfo());
+        internal new BallPrediction GetBallPrediction() => new BallPrediction(base.GetBallPrediction());
     }
 }

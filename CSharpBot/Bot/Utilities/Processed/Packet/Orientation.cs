@@ -1,7 +1,7 @@
 using System;
 using System.Numerics;
 
-namespace Bot.Utilities.Packet
+namespace Bot.Utilities.Processed.Packet
 {
     public class Orientation
     {
@@ -13,11 +13,22 @@ namespace Bot.Utilities.Packet
         public Vector3 Right;
         public Vector3 Up;
 
-        public Orientation(rlbot.flat.Rotator rotator)
+        public Orientation(rlbot.flat.Rotator? rotator)
         {
-            Pitch = rotator.Pitch;
-            Roll = rotator.Roll;
-            Yaw = rotator.Yaw;
+            // The Rotator from the ball prediction is always null.
+            // This ends up breaking this class unless we account for it.
+            if (rotator.HasValue)
+            {
+                Pitch = rotator.Value.Pitch;
+                Roll = rotator.Value.Roll;
+                Yaw = rotator.Value.Yaw;
+            }
+            else
+            {
+                Pitch = 0;
+                Roll = 0;
+                Yaw = 0;
+            }
 
             float cp = (float) Math.Cos(Pitch);
             float cy = (float) Math.Cos(Yaw);

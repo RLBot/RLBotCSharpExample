@@ -1,15 +1,15 @@
-namespace Bot.Utilities.Packet
+namespace Bot.Utilities.Processed.Packet
 {
     public class Player
     {
-        public Physics Physics;
-        public bool IsSupersonic;
-        public bool HasWheelContact;
-        public bool Jumped;
-        public bool DoubleJumped;
-        public string Name;
-        public int Team;
         public int Boost;
+        public bool DoubleJumped;
+        public bool HasWheelContact;
+        public bool IsSupersonic;
+        public bool Jumped;
+        public string Name;
+        public Physics Physics;
+        public int Team;
 
         public Player(rlbot.flat.PlayerInfo playerInfo)
         {

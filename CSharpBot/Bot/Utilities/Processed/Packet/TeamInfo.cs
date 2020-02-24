@@ -1,4 +1,4 @@
-namespace Bot.Utilities.Packet
+namespace Bot.Utilities.Processed.Packet
 {
     public class TeamInfo
     {
