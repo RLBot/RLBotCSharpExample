@@ -54,12 +54,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="FlatBuffers, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\RLBot.Framework.1.11.0\lib\net461\FlatBuffers.dll</HintPath>
-    </Reference>
-    <Reference Include="RLBotDotNet, Version=1.11.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\RLBot.Framework.1.11.0\lib\net461\RLBotDotNet.dll</HintPath>
+      <HintPath>..\packages\RLBot.Framework.1.12.2\lib\net461\FlatBuffers.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
+    <Reference Include="RLBotDotNet, Version=1.12.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RLBot.Framework.1.12.2\lib\net461\RLBotDotNet.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Numerics" />
@@ -87,9 +87,6 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-    <None Include="port.cfg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
