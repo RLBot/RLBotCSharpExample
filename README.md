@@ -10,7 +10,7 @@ Make sure you've installed [Python 3.7 64 bit](https://www.python.org/ftp/python
    - Make sure pip is included in the installation
    
 Set up RLBotGUI
-1. Follow instructions at https://youtu.be/lPkID_IH88U for instructions.
+1. Follow instructions at https://youtu.be/oXkbizklI2U for instructions.
 1. Use Add -> Load folder in RLBotGUI on the current directory. This bot should appear in the list.
 
 
