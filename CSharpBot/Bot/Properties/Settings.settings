@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Bot.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Setting" Roaming="true" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Rocketleague
+Bakkesmod</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
