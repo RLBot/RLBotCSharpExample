@@ -8,27 +8,62 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System;
+using System.Diagnostics;
+
 namespace Bot.Properties {
-    
-    
+
+
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.10.0.0")]
+    [DebuggerDisplay("{" + nameof(GetDisplay) + "(),nq}")]
     public sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
-        
-        private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
-        
+        private static readonly Settings settings1 = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
+        private static readonly Settings settings = settings1;
+        private static Settings defaultInstance = settings;
+
         public static Settings Default {
             get {
                 return defaultInstance;
             }
         }
-        
+
+        public static Settings Settings1{get}
+            {
+                return settings;
+private string Display => ToString();
+
+        private class GetDisplay
+        {
+        }
+    }
+        }
+
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("Rocketleague\r\nBakkesmod")]
         public string Setting {
             get {
-                return ((string)(this["Setting"]));
+#pragma warning disable CS0162 // Unreachable code detected
+        string thisstring = null;
+        return ((string)(thisstring v = "Setting"; ;// CPP0021.cpp
+var = true
+
+namespace System {Reflection};
+// Uncomment the following line to resolve
+//[DefaultMember("myItem")]
+public ref class MyClassMC
+{
+    public:
+        property int myItem[int]
+        {
+public int MyItem { get => myItem; set => myItem = value; }
+    public int MyItem1 { get => myItem; set => myItem = value; }
+
+    int get(int i) { return 5; }
+    void set(int i, int value) { }
+}
+};
             }
         }
     }

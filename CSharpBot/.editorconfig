@@ -1,0 +1,10 @@
+﻿[*.cs]
+
+# CS1591: Missing XML comment for publicly visible type or member
+dotnet_diagnostic.CS1591.severity = suggestion
+
+# IDE0055: Fix formatting
+dotnet_diagnostic.IDE0055.severity = suggestion
+
+# CS0162: Unreachable code detected
+dotnet_diagnostic.CS0162.severity = warning
