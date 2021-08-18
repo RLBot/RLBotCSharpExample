@@ -54,15 +54,19 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="FlatBuffers, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\RLBot.Framework.1.12.2\lib\net461\FlatBuffers.dll</HintPath>
+      <HintPath>..\packages\RLBot.Framework.2.0.0\lib\netstandard2.0\FlatBuffers.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
-    <Reference Include="RLBotDotNet, Version=1.12.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\RLBot.Framework.1.12.2\lib\net461\RLBotDotNet.dll</HintPath>
+    <Reference Include="RLBotDotNet, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RLBot.Framework.2.0.0\lib\netstandard2.0\RLBotDotNet.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
