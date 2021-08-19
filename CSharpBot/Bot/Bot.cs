@@ -1,5 +1,5 @@
-﻿using System.Numerics;
-using System.Windows.Media;
+﻿using System.Drawing;
+using System.Numerics;
 using Bot.Utilities.Processed.BallPrediction;
 using Bot.Utilities.Processed.FieldInfo;
 using Bot.Utilities.Processed.Packet;
@@ -21,8 +21,8 @@ namespace Bot
 
             // Get the data required to drive to the ball.
             Vector3 ballLocation = packet.Ball.Physics.Location;
-            Vector3 carLocation = packet.Players[index].Physics.Location;
-            Orientation carRotation = packet.Players[index].Physics.Rotation;
+            Vector3 carLocation = packet.Players[Index].Physics.Location;
+            Orientation carRotation = packet.Players[Index].Physics.Rotation;
 
             // Find where the ball is relative to us.
             Vector3 ballRelativeLocation = Orientation.RelativeLocation(carLocation, ballLocation, carRotation);
@@ -36,9 +36,9 @@ namespace Bot
                 steer = -1;
             
             // Examples of rendering in the game
-            Renderer.DrawString3D("Ball", Colors.Black, ballLocation, 3, 3);
-            Renderer.DrawString3D(steer > 0 ? "Right" : "Left", Colors.Aqua, carLocation, 3, 3);
-            Renderer.DrawLine3D(Colors.Red, carLocation, ballLocation);
+            Renderer.DrawString3D("Ball", Color.Black, ballLocation, 3, 3);
+            Renderer.DrawString3D(steer > 0 ? "Right" : "Left", Color.Aqua, carLocation, 3, 3);
+            Renderer.DrawLine3D(Color.Red, carLocation, ballLocation);
             
             // This controller will contain all the inputs that we want the bot to perform.
             return new Controller
